@@ -1,0 +1,18 @@
+# defining multiple services in a docker compose file
+# creates the services on the same network and
+# allows them to freely communicate with each other
+
+version: '3' # docker compose file version being used
+services:
+  # variable name that we choose for service 
+  redis-server:
+    image: 'redis' # name of image used, potentially set by us
+  # variable name we choose for service
+  node-app:
+    restart: "no"
+    build: . # look in cur dir for Dockerfile used for this container, and build
+    ports:
+      # dash, -, in yaml file specifies array
+      # this port mapping only for exposing node-app 
+      # container externally (localhost, etc)
+      - "4001:8081" # local_port:internal_port

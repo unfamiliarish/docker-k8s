@@ -20,3 +20,7 @@ Each section with a code-along has its own a directory.
       # debug
       docker run -it gchwalik/simpleweb sh
       ```
+* Section 5: Docker Compose with Multiple Local Containers 
+    * `s5_webpage_visits`
+    * Simple node web app and redis store wrapped in docker containers
+        * Learn how to use simple `docker compose` commands
