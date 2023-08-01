@@ -10,5 +10,7 @@ COPY . .
 CMD ["npm", "start"]
 
 
+# # don't expect file to change much, so tag for easier workflow
 # docker build -t gchwalik/visits:latest .
+
 # docker run -p 8081:8080 gchwalik/visits
