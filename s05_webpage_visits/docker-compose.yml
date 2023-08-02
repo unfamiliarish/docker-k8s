@@ -9,7 +9,7 @@ services: # services, apps/servers/etc that we define below
     image: 'redis' # name of image used, potentially set by us
   # variable name we choose for service
   node-app:
-    restart: "no"
+    restart: always
     build: . # look in curr dir for Dockerfile used for this container, and build
     ports:
       # dash, -, in yaml file specifies array

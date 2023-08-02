@@ -23,6 +23,7 @@ const client = redis.createClient({
 client.set('visits', 0);
 
 app.get('/', (req, res) => {
+    // force-crash app, to test docker-compose service restart
     process.exit(0);
 
     client.get('visits', (err, visits) => {
